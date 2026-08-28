@@ -39,16 +39,23 @@ How it behaves:
 - Cards are sized at 326px wide — that's Instagram's own hard-coded minimum width for their official embed widget, it cannot go smaller. On the category page they wrap onto multiple rows on wide screens and stack on mobile. If you'd rather have genuinely smaller custom-sized preview tiles, that means switching away from Instagram's official widget to custom thumbnail cards instead — let me know if you want that.
 - **This needs to be served over http(s), not opened as a `file://` path** — browsers block a page from fetching a local JSON file directly off disk. Use the local server you've already got running for testing, and once you deploy the whole `vraj` folder to any static host (Netlify, Vercel, GitHub Pages, standard web hosting), it'll work the same way for visitors.
 
-## Brand/client logos (`brands/`)
-Used in the "Brands I've Built Content For" logo cluster (the section right after Tools & Platforms). Export each client logo from Canva as a **transparent PNG**, then save them as:
-- `brand-01.png`
-- `brand-02.png`
-- `brand-03.png`
-- ...through `brand-16.png`
+## Brand/client logos (`brands/`) — fully dynamic, no HTML editing
+The "Brands I've Built Content For" logo cluster reads **[data/brands.json](../../data/brands.json)**, which just lists whatever image files are in this `brands/` folder. There's no fixed slot count — add or remove files and the homepage grid follows.
 
-There are 16 logo slots wired up by default. If you have fewer, just leave the unused numbers blank — those circles quietly show empty and don't look broken. If you have more than 16, open [index.html](../../index.html), find the `<div class="brand-logos">` block, and copy one more `<div class="brand-logo reveal" style="background-image:url('assets/img/brands/brand-17.png')"></div>` line per extra logo.
+**To add/remove logos:**
+1. Drop the image file(s) into `assets/img/brands/` (any name works, but the pattern already in use is `brand-34.png`, `brand-35.jpg`, etc. — pick whatever extension the file already has: `.png`, `.jpg`, `.jpeg`, `.webp`, `.svg`, or `.gif`).
+2. Regenerate the manifest by running this from the project root:
+   ```
+   node scripts/generate-brands-json.js
+   ```
+   That rewrites `data/brands.json` to match exactly what's in the folder — no manual JSON editing needed. It'll print how many logos it found.
+3. Refresh the page.
+
+To remove a logo, delete its file from the folder and re-run the same command.
 
 Logos display on a white circle, so square logos with transparent backgrounds look best (they'll be centered and scaled to fit).
+
+(Don't have Node installed? You can still edit `data/brands.json` by hand — it's just `{ "logos": ["brand-01.png", "brand-02.png", ...] }`, one filename per entry, matching what's actually in the `brands/` folder.)
 
 ## Tip
 Export straight from Canva: select an element/frame → Share → Download → PNG (transparent background for logos) or JPG (for photos). Then just copy the files into these folders with the filenames above.

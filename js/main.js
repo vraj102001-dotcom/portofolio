@@ -92,3 +92,21 @@ if (categoryGrid) {
       categoryGrid.innerHTML = '<p class="category-grid-error">Couldn\'t load categories right now — please refresh.</p>';
     });
 }
+
+// Brand logo cluster: built from data/brands.json, which just lists whatever
+// image files are sitting in assets/img/brands/ — drop a file in, add its
+// name to the JSON, it shows up here automatically.
+const brandLogos = document.getElementById('brandLogos');
+if (brandLogos) {
+  fetch('data/brands.json')
+    .then((res) => res.json())
+    .then((data) => {
+      brandLogos.innerHTML = data.logos.map((file) => `
+        <div class="brand-logo reveal" style="background-image:url('assets/img/brands/${file}')"></div>
+      `).join('');
+      brandLogos.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    })
+    .catch(() => {
+      brandLogos.innerHTML = '<p class="category-grid-error">Couldn\'t load brand logos right now — please refresh.</p>';
+    });
+}
