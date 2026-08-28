@@ -1,0 +1,124 @@
+{
+  "categories": [
+    {
+      "id": "automobile",
+      "name": "Automobile",
+      "icon": "fa-solid fa-car",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_AUTOMOBILE_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_AUTOMOBILE_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_AUTOMOBILE_REEL_3/"
+      ]
+    },
+    {
+      "id": "real-estate",
+      "name": "Real Estate",
+      "icon": "fa-solid fa-building",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_REAL_ESTATE_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_REAL_ESTATE_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_REAL_ESTATE_REEL_3/"
+      ]
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "icon": "fa-solid fa-microchip",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_ELECTRONICS_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_ELECTRONICS_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_ELECTRONICS_REEL_3/"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "icon": "fa-solid fa-graduation-cap",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_EDUCATION_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_EDUCATION_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_EDUCATION_REEL_3/"
+      ]
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion",
+      "icon": "fa-solid fa-shirt",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_FASHION_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_FASHION_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_FASHION_REEL_3/"
+      ]
+    },
+    {
+      "id": "fitness",
+      "name": "Fitness",
+      "icon": "fa-solid fa-dumbbell",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_FITNESS_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_FITNESS_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_FITNESS_REEL_3/"
+      ]
+    },
+    {
+      "id": "jewellery",
+      "name": "Jewellery",
+      "icon": "fa-solid fa-gem",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_JEWELLERY_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_JEWELLERY_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_JEWELLERY_REEL_3/"
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "icon": "fa-solid fa-masks-theater",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_ENTERTAINMENT_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_ENTERTAINMENT_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_ENTERTAINMENT_REEL_3/"
+      ]
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "icon": "fa-solid fa-futbol",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_SPORTS_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_SPORTS_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_SPORTS_REEL_3/"
+      ]
+    },
+    {
+      "id": "pre-launch",
+      "name": "Pre Launch",
+      "icon": "fa-solid fa-rocket",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_PRE_LAUNCH_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_PRE_LAUNCH_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_PRE_LAUNCH_REEL_3/"
+      ]
+    },
+    {
+      "id": "event-expo",
+      "name": "Event & Expo",
+      "icon": "fa-solid fa-calendar-days",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_EVENT_EXPO_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_EVENT_EXPO_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_EVENT_EXPO_REEL_3/"
+      ]
+    },
+    {
+      "id": "series",
+      "name": "Series",
+      "icon": "fa-solid fa-film",
+      "reels": [
+        "https://www.instagram.com/reel/REPLACE_WITH_SERIES_REEL_1/",
+        "https://www.instagram.com/reel/REPLACE_WITH_SERIES_REEL_2/",
+        "https://www.instagram.com/reel/REPLACE_WITH_SERIES_REEL_3/"
+      ]
+    }
+  ]
+}
