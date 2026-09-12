@@ -356,17 +356,32 @@ h1,h2,h3{font-family:var(--font-head);font-weight:400;letter-spacing:0.5px;margi
 .reel-row::-webkit-scrollbar-thumb{background:rgba(7,12,31,0.15);border-radius:999px;}
 
 /* Instagram's official embed can't render narrower than ~326px (its own hard limit) —
-   sizing the card at that floor avoids it fighting our layout and clipping. */
+   sizing the card at that floor avoids it fighting our layout and clipping.
+   The username/follow-button header and the likes/comment footer are locked
+   inside Instagram's iframe (cross-origin — CSS can't reach in and hide just
+   those parts), so instead we clip the whole card down to roughly the media
+   area and shift the iframe up to push the header off the top. This is a
+   crop hack, not real customization: it depends on Instagram's own header/
+   footer heights staying roughly where they are today, and it can drift out
+   of alignment if Instagram changes their embed layout later. */
 .reel-item{
   position:relative;
   flex:0 0 326px;
-  min-height:400px;
+  aspect-ratio:9/16;
   scroll-snap-align:start;
   border-radius:14px;
   overflow:hidden;
   background:var(--off-white);
 }
-.reel-item .instagram-media{position:relative;z-index:1;margin:0 auto !important;width:100% !important;min-width:0 !important;}
+.reel-item .instagram-media{
+  position:absolute !important;
+  top:-58px;
+  left:0;
+  z-index:1;
+  margin:0 !important;
+  width:100% !important;
+  min-width:0 !important;
+}
 
 .reel-skeleton{
   position:absolute;inset:0;z-index:0;
